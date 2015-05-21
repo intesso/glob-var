@@ -1,0 +1,25 @@
+{
+  "name": "glob-var",
+  "version": "1.0.0",
+  "description": "extends glob with named variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd test && node test.js"
+  },
+  "keywords": [
+    "glob",
+    "var",
+    "variable",
+    "param",
+    "parameter"
+  ],
+  "author": "Andi Neck",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^5.0.6"
+  },
+  "devDependencies": {
+    "object-equal": "^1.0.0",
+    "tape": "^4.0.0"
+  }
+}
