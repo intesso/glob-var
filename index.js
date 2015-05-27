@@ -198,8 +198,9 @@ function _extractValues(search) {
       values.push(obj);
     }
 
-    search.values = values;
   });
+
+  search.values = values;
 
   return search;
 }

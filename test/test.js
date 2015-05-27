@@ -56,6 +56,31 @@ test('do search sync', function(t) {
 
 });
 
+test('do search sync not existing', function(t) {
+  var search = glob.sync('fixtures-not-here/:module/public');
+
+  t.equal(search.globstars, 0);
+
+  t.equal(search.paths.length, 0);
+
+  t.equal(search.values.length, 0);
+
+  t.equal(search.vars.length, 1);
+  search.vars[0].index = undefined;
+  t.ok(equal(search.vars[0], {
+      segment: ':module',
+      compiled: '*',
+      type: 'named',
+      name: 'module',
+      globstar: false,
+      index: undefined
+    })
+  );
+
+  t.end();
+
+});
+
 test('do search with globstar', function(t) {
   var search = glob.sync('fixtures/:module/public/:rest*');
 
