@@ -161,3 +161,14 @@ test('insertValues', function(t) {
   t.end();
 
 });
+
+test('insertValues empty', function(t) {
+
+  var values = {':module': 'Irish-Pub', '**': ''};
+  var result = glob.insertValues('fixtures/:module/public/**', values);
+
+  t.equal(result, 'fixtures/Irish-Pub/public/');
+
+  t.end();
+
+});

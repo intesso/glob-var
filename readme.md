@@ -4,6 +4,7 @@ extends [glob](https://github.com/isaacs/node-glob) with named variables.
 
 # why?
 use it when you want to transform the `glob` filename Array.
+it is used in `glob-resolve`.
 
 # how does it work?
 

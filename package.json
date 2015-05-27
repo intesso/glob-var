@@ -1,6 +1,6 @@
 {
   "name": "glob-var",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "extends glob with named variables",
   "main": "index.js",
   "scripts": {

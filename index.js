@@ -115,7 +115,7 @@ exports.insertValues = function(pattern, values) {
   if (!values) return pattern;
   var segments = pattern.split('/');
   var p = segments.map(function(segment, i) {
-    if (values[segment]) return values[segment];
+    if (typeof values[segment] !== 'undefined') return values[segment];
     return segment;
   });
   return p.join('/');
